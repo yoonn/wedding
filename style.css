@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFLightA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --highlight: #ea7664;
+    --gray-font: #989898;
+    --bs-accordion-bg: #aaaaaa;
+    --accordion-border-color: #dee2e6;
+
+    --map-btn-size: 50px;
+}
+
+.fs-35 {font-size: 35px;}
+.fs-27 {font-size: 27px;}
+.fs-23 {font-size: 23px;}
+.fs-21 {font-size: 21px;}
+.fs-18 {font-size: 18px;}
+.fs-15 {font-size: 15px;}
+.fs-13 {font-size: 13px;}
+
+.lh-28 {line-height: 28px;}
+.lh-35 {line-height: 35px;}
+.lh-40 {line-height: 40px;}
+
+.gray-font{
+    color: var(--gray-font);
+}
+.highlight {
+    color: var(--highlight);
+}
+
+* {
+	font-family: 'GangwonEdu_OTFLightA';
+	font-weight: 300;
+}
+
+body {
+    background-color: #333;
+}
+
+.container {
+    max-width: 430px;
+    background-color: #fff;
+}
+
+.weddingDay {
+    width: 60%;
+}
+
+.main .photo {
+    width: 100%;
+}
+
+.fade_container {
+    position: relative;
+    height: calc((100vw - var(--bs-gutter-x)) / 853 * 1280);
+    max-height: 630px;
+}
+.fade_container img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fade-out-box {
+  display: inline-block;
+  animation: fadeout 4s;
+  -webkit-animation: fadeout 4s; /* Safari and Chrome */
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+  z-index: 10;
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.invite span {
+    display: inline-block;
+}
+
+.invite .parents{
+    width: 150px;
+}
+.invite .child {
+    width: 70px;
+}
+
+.calendar-div {
+    border: 1px solid #e8dfdf;;
+    border-left: 0;
+    border-right: 0;
+}
+
+.calendar-table {
+    border-spacing: 2px;
+    width: 100%;
+
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.calendar-table>tbody tr td:first-child, .calendar-table>thead tr th:first-child {
+    color: #c6472b!important;
+}
+
+.calendar-dday {
+    color: #fff;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-dday div {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    background-color: #cec3c3;
+}
+
+.bgGradient.pink {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    background: radial-gradient(#ed94957a, #ed949540, #ed949500, #9198e500);
+}
+
+.bgGradient.blue {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    background: radial-gradient(#94e0ed7a, #94e0ed40, #ed949500, #9198e500);
+}
+
+.bgGradient.gray {
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    background: radial-gradient(#cbd1d77a, #cbd1d740, #ed949500, #9198e500);
+}
+
+.bgGradient img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.btnPhone {
+    width: 70%;
+    left: 7px;
+}
+
+.btnText {
+    width: 80%;
+    left: 5px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--accordion-border-color);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: var(--bs-accordion-bg);
+    box-shadow: none;
+    border-bottom: 1px solid var(--accordion-border-color);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon);
+}
+
+.mapBtn {
+    display: inline-block;
+    position: relative;
+    width: var(--map-btn-size);
+    height: var(--map-btn-size);
+    border-radius: var(--map-btn-size);
+}
+
+.mapBtn img {
+    width: var(--map-btn-size);
+    height: var(--map-btn-size);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mapSpan {
+    display: block;
+}
+
+.btnKakaoPay {
+    background: #fae100;
+}
+
+.btnKakaoPay img {
+    width: 50px;
+}
+
+.accordion-button{
+    font-size: 20px;
+}
+
+.footer {
+    background: #ed94953b;
+}
+
+.footer svg {
+    margin: -3px 2px 0 0;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}

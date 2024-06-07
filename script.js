@@ -1,9 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", function(){
-    makeMap();
-    addPhotos();
+    addPhotos('photo_wedding', 'img/photos/', 'jpeg', 42);
+    addPhotos('photo_snap', 'img/snap/', 'jpg', 82);
+    addPhotos('photo_1st', 'img/1st/', 'jpeg', 2);
     getDDay();
 
+    makeMap();
     Kakao.init('5b530fd96142df42568888e8aba54815'); // 사용하려는 앱의 JavaScript 키 입력
 });
 
@@ -21,12 +23,12 @@ function makeMap() {
 
     var geocoderCenter = new kakao.maps.services.Geocoder();
     geocoderCenter.addressSearch('서울특별시 영등포구 문래로 175', function(result, status) {
-         if (status === kakao.maps.services.Status.OK) {
+        if (status === kakao.maps.services.Status.OK) {
             var centerCords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
             var geocoder = new kakao.maps.services.Geocoder();
             geocoder.addressSearch('서울특별시 영등포구 문래로 164 SK 리더스뷰 4층', function(result, status) {
-                 if (status === kakao.maps.services.Status.OK) {
+                if (status === kakao.maps.services.Status.OK) {
                     var cords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
                     var marker = new kakao.maps.Marker({
@@ -44,25 +46,6 @@ function makeMap() {
             });
         }
     });
-
-    /*var geocoder = new kakao.maps.services.Geocoder();
-    geocoder.addressSearch('서울특별시 영등포구 문래로 164 SK 리더스뷰 4층', function(result, status) {
-         if (status === kakao.maps.services.Status.OK) {
-            var cords = new kakao.maps.LatLng(result[0].y, result[0].x);
-            console.log(cords);
-            var marker = new kakao.maps.Marker({
-                map: map,
-                position: cords
-            });
-
-            var infowindow = new kakao.maps.InfoWindow({
-                content: '<div style="width:150px;text-align:center;padding:6px 0;font-size: 18px;">진현♡윤진<br/>JK아트컨벤션<br/>아트리움홀</div>'
-            });
-            infowindow.open(map, marker);
-
-            map.setCenter(centerCords);
-        }
-    });*/
 }
 
 /*지도 연결하기*/
@@ -84,68 +67,29 @@ function clickKaKaoMap() {
     location.href = "https://map.kakao.com/link/map/19244225";
 }
 
-function addPhotos() {
-    const photoCarousel = document.getElementById("photoCarousel");
-
-    const photoPrefix = 'img/photos/';
-    const photoSuffix = '.jpeg';
-    let photoName = '';
+function addPhotos(elemId, dirPrefix, extension, photoCount) {
+    const photoCarousel = document.getElementById(elemId);
     let photoHeight = 0;
 
-    for (let i=1; i<=42; i++ ) {
+    for (let i=1; i<=photoCount; i++ ) {
         const baseDiv = document.createElement("div");
         baseDiv.className = i == 1 ? "carousel-item active" : "carousel-item";
 
-        photoName = photoPrefix + i + photoSuffix;
-
         const baseImg = document.createElement("img");
-        baseImg.className = "d-block w-100";
-        baseImg.src = photoName;
+        baseImg.className = "w-100";
+        baseImg.src = `${dirPrefix}${i}.${extension}`;
 
-        // 608
         if (i == 1) {
             const clientWidth = document.documentElement.clientWidth > 430 ? 430 : document.documentElement.clientWidth;
             const galleryPadding = parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.5;
             photoHeight = (clientWidth - galleryPadding) / 853 * 1280;
         }
         baseDiv.style.height = photoHeight + 'px';
-
-        if (baseImg.height < baseImg.width) {
-            baseImg.style.position = "absolute";
-            baseImg.style.top = "25%";
-        }
+        baseDiv.style.lineHeight = photoHeight + 'px';
 
         baseDiv.appendChild(baseImg);
         photoCarousel.appendChild(baseDiv);
     }
-}
-
-function payLink(receiver) {
-    let payLinkList = {
-        'yj': 'https://qr.kakaopay.com/Ej9EyDt36',
-        'jh': 'https://qr.kakaopay.com/Ej7p42wyT'
-    };
-
-    location.href = payLinkList[receiver];
-}
-
-function copyAccount(receiver) {
-    let accountList = {
-        'yj': '110235459512',
-        'jh': '01031211578',
-        'dg': '84907008765',
-        'sa': '110048188537'
-    };
-
-    var tempElem = document.createElement('textarea');
-    tempElem.value = accountList[receiver];
-    document.body.appendChild(tempElem);
-
-    tempElem.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempElem);
-
-    alert("계좌번호 복사완료!");
 }
 
 function copyUrl() {
@@ -162,29 +106,12 @@ function copyUrl() {
 
 function getDDay() {
     const setDate = new Date("2023-05-28T00:00:00+0900");
-    const setDateYear = setDate.getFullYear();
-    const setDateMonth = setDate.getMonth() + 1;
-    const setDateDay = setDate.getDate();
-
     const now = new Date();
-
     const distance = setDate.getTime() - now.getTime();
 
-    const day = Math.floor(distance/(1000*60*60*24));
-
+    const day = -Math.floor(distance/(1000*60*60*24));
     const dDayElem = document.getElementById("dday");
     dDayElem.innerHTML = day + 1 + '일';
-
-//    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-//    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-//    const seconds = Math.floor((distance % (1000*60))/1000);
-
-//    console.log(
-//    `${setDateYear}년 ${setDateMonth}월 ${setDateDay}일까지
-//      ${day}일
-//      ${hours < 10 ? `0${hours}` : hours}시간
-//      ${minutes < 10 ? `0${minutes}` : minutes}분
-//      ${seconds < 10 ? `0${seconds}` : seconds}초 남았습니다.`);
 }
 
 function shareMessage() {

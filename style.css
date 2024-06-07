@@ -251,3 +251,7 @@ td {
     height: 18px;
     vertical-align: middle;
 }
+
+.carousel-item {
+    /* background: #ececec; */
+}

@@ -62,7 +62,7 @@
 
     <div class="row calendar py-5 px-3">
         <div class="col-12 fs-35 fw-bold">5월</div>
-        <div class="col-12 fs-18 mb-3">두 사람, 결혼합니다</div>
+        <div class="col-12 fs-18 mb-3">두 사람, 결혼했습니다!</div>
         <div class="col-12 calendar-div fs-5 my-4 py-4 lh-lg">
             <table cellspacing="0" class="calendar-table">
                 <thead>
@@ -130,36 +130,13 @@
         <div class="col-12 fs-18">2023.05.28 일요일 오후 1시</div>
         <div class="col-12 fs-18 mt-3">
             진현 <span class="highlight">♥</span> 윤진의 결혼식이
-            <span id="dday" class="highlight fw-bold">90일</span> 남았습니다.
+            <span id="dday" class="highlight fw-bold">90일</span> 지났습니다.
         </div>
     </div>
 
     <div class="row contact py-5">
         <div class="col-12 fs-27 fw-bold mb-5">
-            갤러리
-        </div>
-        <div id="carouselExampleIndicators" class="carousel slide">
-<!--            <div class="carousel-indicators">-->
-<!--                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
-<!--                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
-<!--                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
-<!--            </div>-->
-            <div id="photoCarousel" class="carousel-inner">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-
-    <div class="row contact pt-5">
-        <div class="col-12 fs-27 fw-bold mb-5">
-            오시는 길
+            ᡣ𐭩 결혼했던 장소
         </div>
         <div class="col-12 position-relative">
             <div id="map" style="width:100%;height:400px;"></div>
@@ -170,207 +147,58 @@
         </div>
     </div>
 
-    <div class="row mt-4 px-4">
-        <div class="col-3 px-0">
-            <div class="mapBtn" onclick="clickTMap();">
-                <img class="" src="img/location_tmap.png">
-            </div>
-            <span class="mapSpan">티맵</span>
+    <div class="row contact py-5">
+        <div class="col-12 fs-27 fw-bold mb-5">
+            ᡣ𐭩 웨딩촬영
         </div>
-        <div class="col-3 px-0">
-            <div class="mapBtn" onclick="clickKaKaoNavi();">
-                <img class="" src="img/location_kakaonavi.png">
+        <div id="photo_wedding_target" class="carousel slide">
+            <div id="photo_wedding" class="carousel-inner">
             </div>
-            <span class="mapSpan">카카오내비</span>
-        </div>
-        <div class="col-3 px-0">
-            <div class="mapBtn" onclick="clickNaverMap();">
-                <img class="" src="img/location_navermap.png">
-            </div>
-            <span class="mapSpan">네이버맵</span>
-        </div>
-        <div class="col-3 px-0">
-            <div class="mapBtn" onclick="clickKaKaoMap();">
-                <img class="" src="img/location_kakaomap.png">
-            </div>
-            <span class="mapSpan">카카오맵</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#photo_wedding_target" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#photo_wedding_target" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
     <div class="row contact py-5">
-        <div class="col-12 fs-27 fw-bold my-4">
-            연락하기
+        <div class="col-12 fs-27 fw-bold mb-5">
+            ᡣ𐭩 결혼식 스냅
         </div>
-        <div class="col-12 mb-3 fs-18">
-            <span class="align-middle me-2">신랑에게 연락하기</span>
-            <div class="align-middle bgGradient blue me-2" onclick="location.href='tel:01031211578'">
-                <img class="btnPhone" src="img/phone_heart.png">
+        <div id="photo_snap_target" class="carousel slide">
+            <div id="photo_snap" class="carousel-inner">
             </div>
-            <div class="align-middle bgGradient gray" onclick="location.href='sms:01031211578'">
-                <img class="btnText" src="img/text_heart.png">
-            </div>
-        </div>
-        <div class="col-12 mb-5 fs-18">
-            <span class="align-middle me-2">신부에게 연락하기</span>
-            <div class="align-middle bgGradient pink me-2" onclick="location.href='tel:01099086507'">
-                <img class="btnPhone" src="img/phone_heart.png">
-            </div>
-            <div class="align-middle bgGradient gray" onclick="location.href='sms:01099086507'">
-                <img class="btnText" src="img/text_heart.png">
-            </div>
-        </div>
-
-        <div class="col-12 fs-18">
-            <div class="row">
-                <div class="col-6 ps-5">
-                    <div class="mb-3">신랑측 혼주</div>
-                    <div class="mb-2">
-                        <span class="gray-font fs-15">아버지</span>
-                        김동기
-                    </div>
-                    <div class="mb-3">
-                        <div class="bgGradient blue me-2" onclick="location.href='tel:01053909557'">
-                            <img class="btnPhone" src="img/phone_heart.png">
-                        </div>
-                        <div class="bgGradient gray" onclick="location.href='sms:01053909557'">
-                            <img class="btnText" src="img/text_heart.png">
-                        </div>
-                    </div>
-                    <div class="mb-2">
-                        <span class="gray-font fs-15">어머니</span>
-                        장은자
-                    </div>
-                    <div>
-                        <div class="bgGradient blue me-2" onclick="location.href='tel:01039008149'">
-                            <img class="btnPhone" src="img/phone_heart.png">
-                        </div>
-                        <div class="bgGradient gray" onclick="location.href='sms:01039008149'">
-                            <img class="btnText" src="img/text_heart.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 pe-5">
-                    <div class="mb-3">신부측 혼주</div>
-                    <div class="mb-2">
-                        <span class="gray-font fs-15">어머니</span>
-                        윤순애
-                    </div>
-                    <div>
-                        <div class="bgGradient pink me-2" onclick="location.href='tel:01049116506'">
-                            <img class="btnPhone" src="img/phone_heart.png">
-                        </div>
-                        <div class="bgGradient gray" onclick="location.href='sms:01049116506'">
-                            <img class="btnText" src="img/text_heart.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#photo_snap_target" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#photo_snap_target" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
+
     <div class="row contact py-5">
-        <div class="col-12 fs-27 fw-bold mb-4">
-            마음 전하실 곳
+        <div class="col-12 fs-27 fw-bold mb-5">
+            ᡣ𐭩 결혼 1주년
         </div>
-        <div class="col-12 fs-18">
-            <div class="accordion mb-2" id="accordionGroom">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingGroom">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse-groom" aria-expanded="true" aria-controls="collapse-groom">
-                            신랑측 계좌번호
-                        </button>
-                    </h2>
-                    <div id="collapse-groom" class="accordion-collapse collapse" aria-labelledby="headingGroom"
-                         data-bs-parent="#accordionGroom">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item p-0">
-                                <div class="container">
-                                    <div class="row align-items-center">
-                                        <div class="col-3 text-end gray-font lh-28 fs-15">
-                                            신랑<br/>기업은행
-                                        </div>
-                                        <div class="col-5 px-0 text-start fs-18">
-                                            김진현<br/>
-                                            010-3121-1578
-                                        </div>
-                                        <div class="col-4 d-grid gap-2 py-2">
-                                            <button class="btn btn-sm btnKakaoPay" onclick="payLink('jh')"><img src="img/kakao_pay.png"></button>
-                                            <button class="btn btn-outline-secondary btn-sm" onclick="copyAccount('jh')">복사하기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item p-0">
-                                <div class="container">
-                                    <div class="row align-items-center py-3">
-                                        <div class="col-3 text-end gray-font fs-15 lh-28">
-                                            아버지<br/>우리은행
-                                        </div>
-                                        <div class="col-5 px-0 text-start fs-18">
-                                            김동기<br/>
-                                            849-07-008765
-                                        </div>
-                                        <div class="col-4 d-grid gap-2 py-2">
-                                            <button class="btn btn-outline-secondary btn-sm" onclick="copyAccount('dg')">복사하기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div id="photo_1st_target" class="carousel slide">
+            <div id="photo_1st" class="carousel-inner">
             </div>
-
-            <div class="accordion" id="accordionBride">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingBride">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse-bride" aria-expanded="true" aria-controls="collapse-bride">
-                            신부측 계좌번호
-                        </button>
-                    </h2>
-                    <div id="collapse-bride" class="accordion-collapse collapse" aria-labelledby="headingBride"
-                         data-bs-parent="#accordionBride">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item p-0">
-                                <div class="container">
-                                    <div class="row align-items-center">
-                                        <div class="col-3 text-end gray-font fs-15 lh-28">
-                                            신부<br/>신한은행
-                                        </div>
-                                        <div class="col-5 px-0 text-start fs-18">
-                                            오윤진<br/>
-                                            110-235-459512
-                                        </div>
-                                        <div class="col-4 d-grid gap-2 py-2">
-                                            <button class="btn btn-sm btnKakaoPay" onclick="payLink('yj')"><img src="img/kakao_pay.png"></button>
-                                            <button class="btn btn-outline-secondary btn-sm" onclick="copyAccount('yj')">복사하기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item p-0">
-                                <div class="container">
-                                    <div class="row align-items-center py-3">
-                                        <div class="col-3 text-end gray-font fs-15 lh-28">
-                                            어머니<br/>신한은행
-                                        </div>
-                                        <div class="col-5 px-0 text-start fs-18">
-                                            윤순애<br/>
-                                            110-048-188537
-                                        </div>
-                                        <div class="col-4 d-grid gap-2 py-2">
-                                            <button class="btn btn-outline-secondary btn-sm" onclick="copyAccount('sa')">복사하기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+            <button class="carousel-control-prev" type="button" data-bs-target="#photo_1st_target" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#photo_1st_target" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
@@ -386,10 +214,8 @@
         <div class="col-12 fs-13 mt-4 mb-3">
             Copyright 2023. yoon. All rights reserved.
         </div>
-<!--        <div class="col-12">-->
-<!--            <a href="https://www.flaticon.com/kr/free-icons/" title="요구 아이콘">요구 아이콘  제작자: Freepik - Flaticon</a>-->
-<!--        </div>-->
     </div>
+
 </div>
 </body>
 </html>
